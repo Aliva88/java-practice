@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SearchProgram {
+public class Searchprogram {
 
     // Linear Search Method
     public static int linearSearch(int arr[], int key) {
