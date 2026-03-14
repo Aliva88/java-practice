@@ -41,9 +41,9 @@ class mystack {
   public boolean isFull() {
     if(top == size-1)
     {
-      return false;
+      return true;
     }
-    return true;
+    return false;
   }
 }
 public class StackOpr {
