@@ -37,7 +37,7 @@ public class Searching {
 
         int arr[] = new int[n];
 
-        System.out.println("Enter array elements:");
+        System.out.println("Enter array elements: ");
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
@@ -75,8 +75,6 @@ public class Searching {
             default:
                 System.out.println("Invalid choice!");
         }
-	
-
         sc.close();
     }
 }

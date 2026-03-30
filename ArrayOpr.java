@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class ArrayOpr
+public class ArrayOpr
 {
 	public static void main(String arg[])
 	{
@@ -13,12 +13,15 @@ class ArrayOpr
 			System.out.println("--Array Operation--");
 			System.out.println("1. Create Array");
 			System.out.println("2. Traverse Array");
-			System.out.println("3. Insert Element");
-			System.out.println("4. Exit");
+			System.out.println("3. Insert Element in begining position");
+			System.out.println("4. Insert Element in end position");
+			System.out.println("5. Insert Element in any position");
+			System.out.println("6. Exit");
 			System.out.println("Enter your choice");
 			choice = sc.nextInt();
 			switch(choice)
 			{
+				//Create array
 				case 1:
 				System.out.print("Enter the size of the array");
 		   		size = sc.nextInt();
@@ -30,6 +33,7 @@ class ArrayOpr
 				System.out.println("Array is created");
 				break;
 
+				//Traverse array
 				case 2:
 				if(size==0)
 				{
@@ -46,7 +50,36 @@ class ArrayOpr
 				}
 				break;
 
+				//Insert at begining
 				case 3:
+					size++;
+					if(size == arr.length){
+						System.out.println("Array is full");
+						return ;
+					}
+					System.out.println("Enter the element to insert at the beginning");
+					int data = sc.nextInt();
+					for(int i=size; i>size ;i--){
+						arr[i]=arr[i-1];
+					}
+					arr[0]=data;
+				
+					break;
+
+				//Insert at end
+				case 4:
+					if(size == arr.length){
+						System.out.println("Array is full");
+						return ;
+					}
+					System.out.println("Enter the position where to  insert element ");
+					int value = sc.nextInt();
+					arr[size]=value;
+					size++;
+					break;
+
+				//Insert at any position
+				case 5:
 				if(size == arr.length)
 				{
 					System.out.println("Array is full");
@@ -73,7 +106,7 @@ class ArrayOpr
 				}
 				break;
 
-				case 4:
+				case 6:
 				System.out.println("--Program Exit--");
 				break;
 
@@ -81,7 +114,7 @@ class ArrayOpr
 				System.out.println("Invalid choice");
 			}
 		}
-		while(choice!=4);
+		while(choice!=6);
 		sc.close();
 	}
 }

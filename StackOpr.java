@@ -21,7 +21,8 @@ class mystack {
       System.out.println("Stack underflow");
       return -1;
     }
-    return arr[top--];
+    top--;
+    return arr[top];
   }
   public int peek() {
     if(top == -1)
@@ -62,5 +63,7 @@ public class StackOpr {
     System.out.println("Delet element: "+stack.pop());
     System.out.println("Top element: "+stack.peek());
     System.out.println("Is Full: "+stack.isFull());
+    stack.pop();
+    System.out.println("Top element: "+stack.peek());
   }
 }
